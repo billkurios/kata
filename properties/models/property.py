@@ -1,4 +1,4 @@
-from .common import db
+from ...db import db
 
 
 class Property(db.Model):
@@ -22,3 +22,9 @@ class Property(db.Model):
             'number_bedrooms': self.number_bedrooms,
             'price': self.price
         }
+
+    @staticmethod
+    def get_objects(cls, **args):
+        properties = cls.query.filter_by(**args).all()
+        for property in properties:
+            yield property
