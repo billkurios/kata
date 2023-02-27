@@ -24,4 +24,8 @@ def create_app(test_config=None):
 
     db.init_app(app)
 
+    from flask_alembic import Alembic
+    alembic = Alembic()
+    alembic.init_app(app)
+
     return app
