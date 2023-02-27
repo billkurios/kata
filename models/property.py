@@ -1,4 +1,4 @@
-from ..init import db
+from .common import db
 
 
 class Property(db.Model):
@@ -10,3 +10,15 @@ class Property(db.Model):
     number_bedrooms = db.Column(db.Integer, nullable=False)
     price = db.Column(db.Integer, nullable=False)
     manager_id = db.Column(db.Integer, db.ForeignKey('manager.id'))
+
+    def to_json(self):
+        """
+        Return the JSON serializable format
+        """
+        return {
+            'id': self.id,
+            'type': self.type,
+            'location': self.location,
+            'number_bedrooms': self.number_bedrooms,
+            'price': self.price
+        }
