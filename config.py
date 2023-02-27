@@ -8,3 +8,5 @@ db_port = os.environ.get('DB_PORT')
 db_user = os.environ.get('DB_USERNAME')
 
 SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+
+RESTPLUS_MASK_SWAGGER = False

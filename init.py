@@ -1,7 +1,12 @@
 import os
 
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
+from .apis.init import blueprint as documented_endpoint
+
+
+db = SQLAlchemy()
 
 def create_app(test_config=None):
     app = Flask(__name__)
@@ -15,7 +20,8 @@ def create_app(test_config=None):
     else:
         app.config.from_mapping(test_config)
     
-    from .db_utils import db
+    app.register_blueprint(documented_endpoint)
+
     db.init_app(app)
 
     return app
