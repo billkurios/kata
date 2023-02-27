@@ -81,7 +81,9 @@ Now run your command to launch your postgres container.
 
 ### Make migrations to initialize database
 
-...
+```sh
+flask db upgrade
+```
 
 ### Run Our flask application
 
