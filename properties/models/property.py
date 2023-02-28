@@ -11,24 +11,6 @@ class Property(db.Model):
     price = db.Column(db.Integer, nullable=False)
     manager_id = db.Column(db.Integer, db.ForeignKey('manager.id'))
 
-    def to_json(self):
-        """
-        Return the JSON serializable format
-        """
-        return {
-            'id': self.id,
-            'type': self.type,
-            'location': self.location,
-            'number_bedrooms': self.number_bedrooms,
-            'price': self.price
-        }
-
-    @staticmethod
-    def get_objects(cls, **args):
-        properties = cls.query.filter_by(**args).all()
-        for property in properties:
-            yield property
-
 
 class PropertySchema(ma.SQLAlchemyAutoSchema):
     class Meta:

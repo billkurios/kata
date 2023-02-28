@@ -1,16 +1,16 @@
-﻿id;type;location;number_bedrooms;price;manager_id
-1;T2;Villejuif;1;700;1
-2;T2;Villejuif;1;700;3
-3;T3;Villejuif;2;900;3
-4;T3;Villejuif;2;950;3
-5;T2;Antony;1;700;2
-6;T2;Antony;1;750;2
-7;T2;Antony;1;800;2
-8;T2;Antony;1;850;2
-9;T1;Antony;1;600;2
-10;T1;Antony;1;550;2
-20;T3;Bussy St Georges;2;800;2
-21;T3;Bussy St Georges;2;900;2
-11;T3;Bussy St Georges;2;800;2
-12;T3;Bussy St Georges;2;800;2
-13;T3;Bussy St Georges;2;800;1
+﻿id,type,location,number_bedrooms,price,manager_id
+1,T2,Villejuif,1,700,1
+2,T2,Villejuif,1,700,3
+3,T3,Villejuif,2,900,3
+4,T3,Villejuif,2,950,3
+5,T2,Antony,1,700,2
+6,T2,Antony,1,750,2
+7,T2,Antony,1,800,2
+8,T2,Antony,1,850,2
+9,T1,Antony,1,600,2
+10,T1,Antony,1,550,2
+20,T3,Bussy St Georges,2,800,2
+21,T3,Bussy St Georges,2,900,2
+11,T3,Bussy St Georges,2,800,2
+12,T3,Bussy St Georges,2,800,2
+13,T3,Bussy St Georges,2,800,1
