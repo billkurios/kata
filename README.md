@@ -1,4 +1,4 @@
-# kata
+# [kata](https://github.com/billkurios/kata)
 Lab on Flask
 
 * [Setup the project in dev mode](docs/setup_dev_env.md)
