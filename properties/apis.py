@@ -1,9 +1,11 @@
 from flask import jsonify, abort, request
 
-from .models.property import Property
+from .models.property import Property, PropertySchema
 from .models.manager import Manager
 from .common import blueprint as bp
 
+
+properties_schema = PropertySchema(many=True)
 
 @bp.route('/manager/properties')
 def manager_properties():
@@ -21,5 +23,7 @@ def manager_properties():
     if manager is None:
         abort(404, f"Manager #Id {manager_id} doesn't exist.")
     
-    properties = Property.get_objects(manager_id=manager_id)
-    return jsonify([property.to_json() for property in properties])
+    # properties = Property.get_objects(Property)
+    # return jsonify([property.to_json() for property in properties])
+    properties = Property.query.filter_by(Property).all()
+    return jsonify(properties_schema.dump(properties))

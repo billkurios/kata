@@ -1,4 +1,4 @@
-from ...db import db
+from ...db import db, ma
 
 
 class Manager(db.Model):
@@ -15,3 +15,7 @@ class Manager(db.Model):
             'id': self.id,
             'name': self.name,
         }
+
+class ManagerSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Manager

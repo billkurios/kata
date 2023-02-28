@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+data/__init__.py
+kata.egg-info/PKG-INFO
+kata.egg-info/SOURCES.txt
+kata.egg-info/dependency_links.txt
+kata.egg-info/entry_points.txt
+kata.egg-info/requires.txt
+kata.egg-info/top_level.txt
+properties/__init__.py
+properties/apis.py
+properties/common.py
+properties/models/__init__.py
+properties/models/manager.py
+properties/models/property.py

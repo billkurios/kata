@@ -1,4 +1,4 @@
-from ...db import db
+from ...db import db, ma
 
 
 class Property(db.Model):
@@ -28,3 +28,9 @@ class Property(db.Model):
         properties = cls.query.filter_by(**args).all()
         for property in properties:
             yield property
+
+
+class PropertySchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Property
+        include_fk = False
