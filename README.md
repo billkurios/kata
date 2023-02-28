@@ -23,7 +23,7 @@ adding new features which would impact existing API, models, database etc...
 
 * [Question 2](docs/question_two.md)
 
-* Question 3
+* *Question 3*
 We prevent SQL injection attacks by serialize user input data and by validate each field of
 our new serialize object.
 I would use a schema validation with Marshmallow library.
@@ -31,7 +31,7 @@ I would use a schema validation with Marshmallow library.
 
 ```
 
-* Question 5
+* *Question 5*
 We can define rate limiting for API endpoints at the web server configuration file. It's a good pratice, because if not defined, our web server would shut down. It's Denied Of Service if the web server get more connections than he can managed.
 
 * [Question 7](docs/question_seven.md)

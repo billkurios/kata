@@ -53,13 +53,13 @@
       "Property": {
         "type": "object",
         "properties": {
-          "number_bedrooms": {
+          "id": {
             "type": "integer"
           },
           "price": {
             "type": "integer"
           },
-          "id": {
+          "number_bedrooms": {
             "type": "integer"
           },
           "location": {
