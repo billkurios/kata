@@ -53,14 +53,6 @@
       "Property": {
         "type": "object",
         "properties": {
-          "type": {
-            "type": "string",
-            "maxLength": 100
-          },
-          "location": {
-            "type": "string",
-            "maxLength": 100
-          },
           "number_bedrooms": {
             "type": "integer"
           },
@@ -69,6 +61,14 @@
           },
           "id": {
             "type": "integer"
+          },
+          "location": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 100
           }
         },
         "required": [

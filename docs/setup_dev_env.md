@@ -96,5 +96,13 @@ flask --env-file=.env run --host=127.0.0.1 --port=3000
 ```
 Here I pass *.env* because this file exists at the root of my project. If your environment file have another name, *replace .env by your env file name*.
 
+Now It's good your project is up and available at *http://127.0.0.1:3000*
 
-* [Back to first section](../README.md)
+### Load some data [Optional]
+
+```
+flask tests load_data
+```
+
+
+[Back To Previous Page](../README.md)
