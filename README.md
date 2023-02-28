@@ -31,6 +31,9 @@ I would use a schema validation with Marshmallow library.
 
 ```
 
+* *Question 4*
+For authentication, an SSO service can managed it. And for authorization on our web application, we can use the framework OAuth2 with the SSO service.
+
 * *Question 5*
 We can define rate limiting for API endpoints at the web server configuration file. It's a good pratice, because if not defined, our web server would shut down. It's Denied Of Service if the web server get more connections than he can managed.
 
