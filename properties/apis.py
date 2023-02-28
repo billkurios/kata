@@ -3,20 +3,30 @@ from flask import jsonify, abort, request
 from .models.property import Property, PropertySchema
 from .models.manager import Manager, ManagerSchema
 from .common import blueprint as bp
+from ..apispec import spec
 
 
 properties_schema = PropertySchema(many=True)
 managers_schema = ManagerSchema(many=True)
 
 
-@bp.route('/managers')
-def managers():
-    managers = Manager.query.all()
-    return jsonify(properties_schema.dump(managers))
-
-
-@bp.route('/manager/properties')
+@bp.route('/manager/properties', methods=["GET"])
 def manager_properties():
+    """Manager's properties endpoint.
+    ---
+    get:
+      description: Get a list of properties linked to the given manager.
+      responses:
+        400:
+          description: Manager Identifier #manager_id is required
+        404:
+          description: manager_id don't exist
+        200:
+          description: Should return a list
+          content:
+            application/json:
+              schema: PropertySchema
+    """
     manager_id = request.args.get('manager_id')
 
     if manager_id is None:
