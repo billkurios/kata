@@ -28,7 +28,12 @@ We prevent SQL injection attacks by serialize user input data and by validate ea
 our new serialize object.
 I would use a schema validation with Marshmallow library.
 ```py
+from marshmallow import ValidationError
 
+try
+    user_input = PropertySchema().load(request.form)
+except ValidationError as err:
+    # .....
 ```
 
 * *Question 4*
